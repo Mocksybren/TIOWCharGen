@@ -1,0 +1,40 @@
+﻿<Application x:Class="TIOWCharGen.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TIOWCharGen"
+             xmlns:ViewModel="clr-namespace:TIOWCharGen.MVVM.ViewModel"
+             xmlns:View="clr-namespace:TIOWCharGen.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/SearchbarTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type ViewModel:HomeViewModel}">
+                <View:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:CharachterViewModel}">
+                <View:CharachterView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:RegimentViewModel}">
+                <View:RegimentView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:ClassViewModel}">
+                <View:ClassView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:EquipmentViewModel}">
+                <View:EquipmentView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:SkillsViewModel}">
+                <View:SkillsView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
