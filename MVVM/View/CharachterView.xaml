@@ -13,8 +13,8 @@
             <ColumnDefinition Width="400"/>
         </Grid.ColumnDefinitions>
         <Label Content="Charachter" 
-               HorizontalAlignment="Left" 
-               Margin="162,19,0,0" 
+               HorizontalAlignment="Center" 
+               Margin="0,22,0,0" 
                VerticalAlignment="Top"
                FontSize="28"
                Foreground="White"/>

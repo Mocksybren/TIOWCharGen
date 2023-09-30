@@ -14,7 +14,20 @@ namespace TIOWCharGen.MVVM.ViewModel
 {
      class MainViewModel : ObservableObject
     {
+        private string _menuText;
 
+        public string MenuText
+        {
+            get { return _menuText; }
+            set
+            {
+                if (_menuText != value)
+                {
+                    _menuText = value;
+                    OnPropertyChanged(nameof(MenuText));
+                }
+            }
+        }
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand CharachterViewCommand { get; set; }
         public RelayCommand RegimentViewCommand { get; set; }
@@ -37,8 +50,8 @@ namespace TIOWCharGen.MVVM.ViewModel
                 OnPropertyChanged();
             }
         }
-        public MainViewModel() 
-        { 
+        public MainViewModel()
+        {
             HomeVM = new HomeViewModel();
             CharachterVM = new CharachterViewModel();
             RegimentVM = new RegimentViewModel();
@@ -48,35 +61,42 @@ namespace TIOWCharGen.MVVM.ViewModel
 
 
             CurrentView = HomeVM;
+            MenuText = "Home";
 
             HomeViewCommand = new RelayCommand(o =>
             {
                 CurrentView = HomeVM;
+                MenuText = "Home";
             });
 
             CharachterViewCommand = new RelayCommand(o =>
             {
                 CurrentView = CharachterVM;
+                MenuText = "Charachter";
             });
 
             RegimentViewCommand = new RelayCommand(o =>
             {
                 CurrentView = RegimentVM;
+                MenuText = "Regiment";
             });
 
             ClassViewCommand = new RelayCommand(o =>
             {
                 CurrentView = ClassVM;
+                MenuText = "Class";
             });
 
             EquipmentViewCommand = new RelayCommand(o =>
             {
                 CurrentView = EquipmentVM;
+                MenuText = "Equipment";
             });
 
             SkillsViewCommand = new RelayCommand(o =>
             {
                 CurrentView = SkillsVM;
+                MenuText = "Skills";
             });
         }
     }
