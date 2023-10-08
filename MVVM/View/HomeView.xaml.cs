@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TIOWCharGen.Popup;
 
 namespace TIOWCharGen.MVVM.View
 {
@@ -27,6 +28,13 @@ namespace TIOWCharGen.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void New_Char(object sender, RoutedEventArgs e)
+        {
+            New_Charachter newCharachter = new New_Charachter();
+            newCharachter.Show();
 
         }
     }

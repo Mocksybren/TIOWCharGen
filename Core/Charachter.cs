@@ -17,6 +17,8 @@ namespace TIOWCharGen.Core
         public string Speciality { get; set; }
         public string Demeanor { get; set; }
         public string Description { get; set; }
+        public string CampaignName { get; set; }
+
 
 
         //Charachteristics
@@ -358,6 +360,7 @@ namespace TIOWCharGen.Core
         public string WeaponClip4 { get; set; }
         public string WeaponRLD4 { get; set; }
         public string WeaponSL4 { get; set; }
+
 
         public TIOWCharachter()
         {

@@ -34,6 +34,7 @@
                                  HorizontalAlignment="Left"
                                  Margin="10,45,0,135"
                                  Background="Transparent">
+                            
                         </ListBox>
                         <Button Content="Select"
                                 Margin="434,45,216,235"
@@ -46,7 +47,7 @@
                         </Button>
                         <Button Content="New"
                                 Margin="434,95,216,185"
-                                Style="{StaticResource ButtonThemeSmall}">
+                                Style="{StaticResource ButtonThemeSmall}" Click="New_Char">
                         </Button>
                         <Button Content="Import"
                                 Margin="434,120,216,160"
