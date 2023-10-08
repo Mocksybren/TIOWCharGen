@@ -21,7 +21,6 @@
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
                                        Rect="0,0,700,300"/>
-
                 </Border.Clip>
                 <Grid>
                     <Grid>
@@ -34,13 +33,12 @@
                                  Width="400"
                                  HorizontalAlignment="Left"
                                  Margin="10,45,0,135"
-                                 Background="Transparent"
-                                 Foreground="White"
-                                 >
+                                 Background="Transparent">
                         </ListBox>
                         <Button Content="Select"
                                 Margin="434,45,216,235"
-                                Style="{StaticResource ButtonThemeSmall}">
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Command="{Binding }">
                         </Button>
                         <Button Content="Remove"
                                 Margin="434,70,216,210"
