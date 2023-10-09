@@ -103,6 +103,34 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Popup\View\NewComradeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popup\View\NewDoctrineSelecView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popup\View\NewGearView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popup\View\NewBaseInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popup\View\NewGenCharacteristicsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popup\View\NewRegimentCreationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popup\View\NewWorldSelecView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +172,35 @@
     </Compile>
     <Compile Include="Popup\New_Charachter.xaml.cs">
       <DependentUpon>New_Charachter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\New_CharachterViewModel.cs" />
+    <Compile Include="Popup\ViewModel\NewBaseInfoViewModel.cs" />
+    <Compile Include="Popup\ViewModel\NewComradeViewModel.cs" />
+    <Compile Include="Popup\ViewModel\NewDoctrineSelecViewModel.cs" />
+    <Compile Include="Popup\ViewModel\NewGearViewModel.cs" />
+    <Compile Include="Popup\ViewModel\NewGenCharacteristicsViewModel.cs" />
+    <Compile Include="Popup\ViewModel\NewRegimentCreationViewModel.cs" />
+    <Compile Include="Popup\ViewModel\NewWorldSelecViewModel.cs" />
+    <Compile Include="Popup\View\NewComradeView.xaml.cs">
+      <DependentUpon>NewComradeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\View\NewDoctrineSelecView.xaml.cs">
+      <DependentUpon>NewDoctrineSelecView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\View\NewGearView.xaml.cs">
+      <DependentUpon>NewGearView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\View\NewBaseInfoView.xaml.cs">
+      <DependentUpon>NewBaseInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\View\NewGenCharacteristicsView.xaml.cs">
+      <DependentUpon>NewGenCharacteristicsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\View\NewRegimentCreationView.xaml.cs">
+      <DependentUpon>NewRegimentCreationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\View\NewWorldSelecView.xaml.cs">
+      <DependentUpon>NewWorldSelecView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

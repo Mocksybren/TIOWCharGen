@@ -42,7 +42,6 @@
                 <RadioButton 
                     Content="Home"
                     Height="50"
-                    Foreground="White"
                     FontSize="24"
                     IsChecked="True"
                     Style="{StaticResource MenuButtonTheme}"
@@ -51,40 +50,30 @@
                 <RadioButton 
                     Content="Charachter"
                     Height="50"
-                    Foreground="White"
-                    FontSize="18"
                     Style="{StaticResource MenuButtonTheme}"
                     Command="{Binding CharachterViewCommand}"/>
 
                 <RadioButton 
                     Content="Regiment"
                     Height="50"
-                    Foreground="White"
-                    FontSize="18"
                     Style="{StaticResource MenuButtonTheme}"
                     Command="{Binding RegimentViewCommand}"/>
 
                 <RadioButton 
                     Content="Class"
                     Height="50"
-                    Foreground="White"
-                    FontSize="18"
                     Style="{StaticResource MenuButtonTheme}"
                     Command="{Binding ClassViewCommand}"
                     />
                 <RadioButton 
                     Content="Equipment"
                     Height="50"
-                    Foreground="White"
-                    FontSize="18"
                     Style="{StaticResource MenuButtonTheme}"
                     Command="{Binding EquipmentViewCommand}"
                     />
                 <RadioButton 
                     Content="Skills"
                     Height="50"
-                    Foreground="White"
-                    FontSize="18"
                     Style="{StaticResource MenuButtonTheme}"
                     Command="{Binding SkillsViewCommand}"
                     />

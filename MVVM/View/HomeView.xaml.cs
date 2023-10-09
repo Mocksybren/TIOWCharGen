@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TIOWCharGen.Popup;
+using TIOWCharGen.Popup.View;
+using TIOWCharGen.Popup.ViewModel;
 
 namespace TIOWCharGen.MVVM.View
 {
@@ -33,8 +35,8 @@ namespace TIOWCharGen.MVVM.View
 
         private void New_Char(object sender, RoutedEventArgs e)
         {
-            New_Charachter newCharachter = new New_Charachter();
-            newCharachter.Show();
+            New_Charachter NewCharachter = new New_Charachter();
+            NewCharachter.Show();
 
         }
     }
