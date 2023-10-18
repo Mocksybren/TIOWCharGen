@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,8 @@ using TIOWCharGen.Popup.ViewModel;
 
 namespace TIOWCharGen.Popup
 {
-    class New_CharachterViewModel : ObservableObject
+    class New_CharachterViewModel : ObservableObject 
     {
-
         public RelayCommand NewBaseInfoViewCommand { get; set; }
         public RelayCommand NewGenCharacteristicsViewCommand { get; set; }
         public RelayCommand NewRegimentCreationViewCommand { get; set; }

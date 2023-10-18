@@ -15,6 +15,7 @@
 
     <Window.DataContext>
         <ViewPopupModel:New_CharachterViewModel/>
+        
     </Window.DataContext>
         
     
@@ -79,7 +80,11 @@
                 Foreground="White"
                 Style="{StaticResource NewCharTheme}"
                     Command="{Binding NewComradeViewCommand}"/>
-
+                <RadioButton
+                    Content="Save"
+                    Foreground="White"
+                    Style="{StaticResource NewCharTheme}"
+                    Click="SaveButton_Click"/>
             </StackPanel>
 
 

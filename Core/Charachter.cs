@@ -25,7 +25,7 @@ namespace TIOWCharGen.Core
         public int WeaponSkill { get; set; }
         public int BallisticSkill { get; set; }
         public int Strength { get; set; }
-        public int Tougness { get; set; }
+        public int Toughness { get; set; }
         public int Agility { get; set; }
         public int Intellegence { get; set; }
         public int Perception { get; set; }

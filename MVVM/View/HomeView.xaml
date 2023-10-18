@@ -99,7 +99,7 @@
             </Border>
 
         </StackPanel>
-        <StackPanel >
+        <StackPanel>
 
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
