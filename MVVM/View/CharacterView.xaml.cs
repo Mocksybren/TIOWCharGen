@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TIOWCharGen.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for CharachterView.xaml
+    /// Interaction logic for characterView.xaml
     /// </summary>
-    public partial class CharachterView : UserControl
+    public partial class characterView : UserControl
     {
-        public CharachterView()
+        public characterView()
         {
             InitializeComponent();
         }

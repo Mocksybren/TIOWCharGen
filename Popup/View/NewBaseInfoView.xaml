@@ -13,7 +13,7 @@
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch">
         <TextBox HorizontalAlignment="Left"
-                 x:Name="CharachterName"
+                 x:Name="CharacterName"
                  Margin="130,49,0,0" 
                  TextWrapping="Wrap" 
                  Text="{Binding CharacterName}" 
@@ -62,20 +62,12 @@
                  Text="{Binding Speciality}" 
                  VerticalAlignment="Top" 
                  Width="120"/>
-        <Label Content="Charachter Name:" HorizontalAlignment="Left" Margin="20,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="Character Name:" HorizontalAlignment="Left" Margin="20,45,0,0" VerticalAlignment="Top"/>
         <Label Content="Player Name:" HorizontalAlignment="Left" Margin="20,76,0,0" VerticalAlignment="Top"/>
         <Label Content="Regiment Name:" HorizontalAlignment="Left" Margin="20,108,0,0" VerticalAlignment="Top"/>
         <Label Content="Description:" HorizontalAlignment="Left" Margin="20,139,0,0" VerticalAlignment="Top"/>
         <Label Content="Demeanor:" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top"/>
         <Label Content="CampaignName:" HorizontalAlignment="Left" Margin="20,201,0,0" VerticalAlignment="Top"/>
         <Label Content="Speciality:" HorizontalAlignment="Left" Margin="20,232,0,0" VerticalAlignment="Top"/>
-       
-       
-        <Button Content="Button" 
-             HorizontalAlignment="Left" 
-             Margin="407,292,0,0" 
-             VerticalAlignment="Top"
-             Click="Save_Button_Click"/>
-        
     </Grid>
 </UserControl>

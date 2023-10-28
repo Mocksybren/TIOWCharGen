@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace TIOWCharGen.Core
 {
-    public class TIOWCharachter
+    public class TIOWcharacter
     {
 
         //Base Info
-        public string CharachterName { get; set; }
+        public string CharacterName { get; set; }
         public string PlayerName { get; set; }
         public string Regiment { get; set; }
         public string Speciality { get; set; }
@@ -21,7 +21,7 @@ namespace TIOWCharGen.Core
 
 
 
-        //Charachteristics
+        //characteristics
         public int WeaponSkill { get; set; }
         public int BallisticSkill { get; set; }
         public int Strength { get; set; }
@@ -362,7 +362,7 @@ namespace TIOWCharGen.Core
         public string WeaponSL4 { get; set; }
 
 
-        public TIOWCharachter()
+        public TIOWcharacter()
         {
             
         }
@@ -376,9 +376,9 @@ namespace TIOWCharGen.Core
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
-        public static TIOWCharachter FromJson(string json)
+        public static TIOWcharacter FromJson(string json)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<TIOWCharachter>(json);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<TIOWcharacter>(json);
         }
     }
 }

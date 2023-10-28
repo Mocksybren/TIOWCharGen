@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TIOWCharGen"
         xmlns:ViewModel="clr-namespace:TIOWCharGen.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="TIOWCharachter Generator" 
+        Title="TIOWcharacter Generator" 
         Height="1000" Width="1600"
         WindowStyle="SingleBorderWindow"
         ResizeMode="CanResize"
@@ -31,7 +31,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="TIOW Charachter Gen"
+            <TextBlock Text="TIOW character Gen"
                        Foreground="White"
                        FontSize="22" 
                        VerticalAlignment="Center" 
@@ -48,10 +48,10 @@
                     Command="{Binding HomeViewCommand}"/>
 
                 <RadioButton 
-                    Content="Charachter"
+                    Content="character"
                     Height="50"
                     Style="{StaticResource MenuButtonTheme}"
-                    Command="{Binding CharachterViewCommand}"/>
+                    Command="{Binding characterViewCommand}"/>
 
                 <RadioButton 
                     Content="Regiment"

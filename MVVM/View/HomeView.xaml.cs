@@ -35,8 +35,8 @@ namespace TIOWCharGen.MVVM.View
 
         private void New_Char(object sender, RoutedEventArgs e)
         {
-            New_Charachter NewCharachter = new New_Charachter();
-            NewCharachter.Show();
+            New_character Newcharacter = new New_character();
+            Newcharacter.Show();
 
         }
     }

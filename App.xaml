@@ -19,8 +19,8 @@
                 <View:HomeView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type ViewModel:CharachterViewModel}">
-                <View:CharachterView/>
+            <DataTemplate DataType="{x:Type ViewModel:characterViewModel}">
+                <View:characterView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type ViewModel:RegimentViewModel}">

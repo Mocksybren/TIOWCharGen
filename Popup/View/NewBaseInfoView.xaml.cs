@@ -21,15 +21,15 @@ namespace TIOWCharGen.Popup.View
     /// </summary>
     public partial class NewBaseInfoView : UserControl
     {
-        private TIOWCharachter character;
+        private TIOWcharacter character;
         public NewBaseInfoView()
         {
-            character = new TIOWCharachter();
+            character = new TIOWcharacter();
             InitializeComponent();
         }
         public async void Save_Button_Click(object sender, RoutedEventArgs e)
         {
-            character.CharachterName = CharachterName.Text;
+            character.CharacterName = CharacterName.Text;
             character.PlayerName = PlayerName.Text;
             character.Regiment = RegimentName.Text;
             character.Description = Description.Text;
@@ -45,7 +45,7 @@ namespace TIOWCharGen.Popup.View
             string subfolder = "TIOWCharGen";
 
 
-            string fileName = $"{character.CharachterName}_data.json";
+            string fileName = $"{character.CharacterName}_data.json";
             string filePath = System.IO.Path.Combine(roamingFolderPath, subfolder, fileName);
             System.IO.Directory.CreateDirectory(System.IO.Path.Combine(roamingFolderPath, subfolder));
             System.IO.File.WriteAllText(filePath, json);

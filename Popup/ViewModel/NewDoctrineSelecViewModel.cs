@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TIOWCharGen.Core;
 
 namespace TIOWCharGen.Popup.ViewModel
 {
-    internal class NewDoctrineSelecViewModel
+    public class NewDoctrineSelecViewModel
     {
+        public TIOWcharacter TIOWcharacter { get; set; }
     }
 }

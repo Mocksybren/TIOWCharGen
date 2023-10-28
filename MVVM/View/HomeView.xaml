@@ -24,12 +24,12 @@
                 </Border.Clip>
                 <Grid>
                     <Grid>
-                        <TextBlock Text="Select Charachter"
+                        <TextBlock Text="Select character"
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"
                                    HorizontalAlignment="Left"/>
-                        <ListBox x:Name="Charachters" Height="120" 
+                        <ListBox x:Name="characters" Height="120" 
                                  Width="400"
                                  HorizontalAlignment="Left"
                                  Margin="10,45,0,135"

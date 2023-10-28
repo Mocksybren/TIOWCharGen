@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TIOWCharGen.Core;
 
 namespace TIOWCharGen.Popup.ViewModel
 {
     public class NewBaseInfoViewModel : INotifyPropertyChanged
     {
+        public TIOWcharacter TIOWcharacter { get; set; }
         private string characterName;
         private string playerName;
         private string campaignName;

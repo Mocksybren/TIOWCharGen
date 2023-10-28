@@ -4,11 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TIOWCharGen.Core;
 
 namespace TIOWCharGen.Popup.ViewModel
 {
     public class NewGenCharacteristicsViewModel : INotifyPropertyChanged
     {
+        public TIOWcharacter TIOWcharacter { get; set; }
         private int weaponSkill;
         private int ballisticSkill;
         private int strength;

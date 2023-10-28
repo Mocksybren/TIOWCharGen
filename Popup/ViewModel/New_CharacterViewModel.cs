@@ -9,7 +9,7 @@ using TIOWCharGen.Popup.ViewModel;
 
 namespace TIOWCharGen.Popup
 {
-    class New_CharachterViewModel : ObservableObject 
+    class New_characterViewModel : ObservableObject 
     {
         public RelayCommand NewBaseInfoViewCommand { get; set; }
         public RelayCommand NewGenCharacteristicsViewCommand { get; set; }
@@ -19,13 +19,13 @@ namespace TIOWCharGen.Popup
         public RelayCommand NewGearViewCommand { get; set; }
         public RelayCommand NewComradeViewCommand { get; set; }
 
-        private NewBaseInfoViewModel BaseInfVM { get; set; }
-        private NewGenCharacteristicsViewModel NewGenCharaVM { get; set; }
-        private NewRegimentCreationViewModel NewRegimentVM { get; set; }
-        private NewDoctrineSelecViewModel NewDoctrineVM { get; set; }
-        private NewWorldSelecViewModel NewWorldVM { get; set; }
-        private NewGearViewModel NewGearVM { get; set; }
-        private NewComradeViewModel NewComradeVM { get; set; }
+        public NewBaseInfoViewModel BaseInfVM { get; set; }
+        public NewGenCharacteristicsViewModel NewGenCharaVM { get; set; }
+        public NewRegimentCreationViewModel NewRegimentVM { get; set; }
+        public NewDoctrineSelecViewModel NewDoctrineVM { get; set; }
+        public NewWorldSelecViewModel NewWorldVM { get; set; }
+        public NewGearViewModel NewGearVM { get; set; }
+        public NewComradeViewModel NewComradeVM { get; set; }
 
         private object _NewcurrentView;
 
@@ -38,7 +38,7 @@ namespace TIOWCharGen.Popup
                 OnPropertyChanged();
             }
         }
-        public New_CharachterViewModel()
+        public New_characterViewModel()
         {
             BaseInfVM = new NewBaseInfoViewModel();
             NewGenCharaVM = new NewGenCharacteristicsViewModel();

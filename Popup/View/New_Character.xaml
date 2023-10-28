@@ -1,4 +1,4 @@
-﻿<Window x:Class="TIOWCharGen.Popup.New_Charachter"
+﻿<Window x:Class="TIOWCharGen.Popup.New_character"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,19 +6,21 @@
         xmlns:local="clr-namespace:TIOWCharGen.Popup"
         xmlns:ViewPopupModel="clr-namespace:TIOWCharGen.Popup"
         mc:Ignorable="d"
-        Title="New Charachter" 
+        Title="New character" 
         Height="800" 
         Width="1000"
         WindowStyle="SingleBorderWindow"
         ResizeMode="CanResize"
         Background="Transparent">
 
+    <Window.Resources>
+        <local:New_characterViewModel x:Key="CharViewModel" />
+    </Window.Resources>
     <Window.DataContext>
-        <ViewPopupModel:New_CharachterViewModel/>
-        
+        <StaticResource ResourceKey="CharViewModel" />
     </Window.DataContext>
-        
-    
+
+
     <Border Background="#272537">
 
         <Grid>
@@ -32,7 +34,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="New Charachter"
+            <TextBlock Text="New Character"
                    Foreground="White"
                    FontSize="18" 
                    VerticalAlignment="Center" 
@@ -48,7 +50,7 @@
                     Command="{Binding NewBaseInfoViewCommand}"/>
 
                 <RadioButton 
-                Content="Charachteristics"
+                Content="Characteristics"
                 Style="{StaticResource NewCharTheme}"
                     Command="{Binding NewGenCharacteristicsViewCommand}"/>
 

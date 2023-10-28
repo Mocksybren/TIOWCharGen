@@ -17,20 +17,20 @@ using TIOWCharGen.Popup.View;
 namespace TIOWCharGen.Popup
 {
     /// <summary>
-    /// Interaction logic for New_Charachter.xaml
+    /// Interaction logic for New_character.xaml
     /// </summary>
-    public partial class New_Charachter : Window
+    public partial class New_character : Window
     {
-        private TIOWCharachter character;
+        private TIOWcharacter character;
         private NewBaseInfoView baseInfoView;
-        public New_Charachter()
+        public New_character()
         {
-            character = new TIOWCharachter();
+            character = new TIOWcharacter();
             InitializeComponent();
         }
         public async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            character.CharachterName = baseInfoView.CharachterName.Text;
+            character.characterName = baseInfoView.characterName.Text;
             character.PlayerName = baseInfoView.PlayerName.Text;
             character.Regiment = baseInfoView.RegimentName.Text;
             character.Description = baseInfoView.Description.Text;
@@ -46,7 +46,7 @@ namespace TIOWCharGen.Popup
             string subfolder = "TIOWCharGen";
 
 
-            string fileName = $"{character.CharachterName}_data.json";
+            string fileName = $"{character.characterName}_data.json";
             string filePath = System.IO.Path.Combine(roamingFolderPath, subfolder, fileName);
             System.IO.Directory.CreateDirectory(System.IO.Path.Combine(roamingFolderPath, subfolder));
             System.IO.File.WriteAllText(filePath, json);
