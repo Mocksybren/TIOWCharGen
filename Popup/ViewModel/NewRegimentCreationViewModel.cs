@@ -10,5 +10,6 @@ namespace TIOWCharGen.Popup.ViewModel
     public class NewRegimentCreationViewModel
     {
         public TIOWcharacter TIOWcharacter { get; set; }
+
     }
 }

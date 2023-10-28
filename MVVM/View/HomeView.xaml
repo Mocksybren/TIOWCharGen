@@ -33,7 +33,8 @@
                                  Width="400"
                                  HorizontalAlignment="Left"
                                  Margin="10,45,0,135"
-                                 Background="Transparent">
+                                 Background="Transparent"
+                                 SelectionChanged="CharacterSelected">
                             
                         </ListBox>
                         <Button Content="Select"
@@ -207,7 +208,7 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label x:Name="Strenght"
+                        <Label x:Name="Strength"
                         Content="0"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"

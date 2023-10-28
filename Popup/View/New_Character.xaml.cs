@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TIOWCharGen.Core;
+using TIOWCharGen.MVVM.View;
 using TIOWCharGen.Popup.View;
 using TIOWCharGen.Popup.ViewModel;
 
@@ -23,8 +24,10 @@ namespace TIOWCharGen.Popup
     public partial class New_character : Window
     {
         private TIOWcharacter character;
-        public New_character()
+        private HomeView homeView;
+        public New_character(HomeView homeView)
         {
+            this.homeView = homeView;
             character = new TIOWcharacter();
             InitializeComponent();
         }
@@ -77,6 +80,8 @@ namespace TIOWCharGen.Popup
             //Console.WriteLine($"JSON Data: {json}");
 
             //Debug MessageBox.Show("Character data saved to: " + filePath);
+            homeView.Main_Load(this, EventArgs.Empty);
+            this.Close();
         }
     }
 }

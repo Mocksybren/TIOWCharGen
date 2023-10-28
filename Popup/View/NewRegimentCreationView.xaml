@@ -7,9 +7,57 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       >
+    <StackPanel>
+        <StackPanel>
+            <Border>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                        <GradientStop Color="#FF5D4EB5" Offset="0.0"/>
+                        <GradientStop Color="#FF11043E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,800,500"/>
+                </Border.Clip>
+                <Grid
+                    Height="450"
+                    Width="800"
+                    >
+                    <ComboBox x:Name="RegimentComboBox"
+                        HorizontalAlignment="Left" 
+                        Margin="10,10,0,0" 
+                        VerticalAlignment="Top" 
+                        Width="200"
+                        SelectedValue="1" 
+                        SelectionChanged="RegimentComboBox_SelectionChanged"
+                        >
+                        <ComboBoxItem Content="CADIANS SHOCK TROOPS"/>
+                        <ComboBoxItem Content="CATACHAN JUNGLE FIGHTERS"/>
+                        <ComboBoxItem Content="THE DEATH KORPS OF KRIEG"/>
+                        <ComboBoxItem Content="ELYSIAN DROP TROOPS"/>
+                        <ComboBoxItem Content="MACCABIAN JANISSARIES"/>
+                        <ComboBoxItem Content="MORDIAN IRON GUARD"/>
+                        <ComboBoxItem Content="TALLARN DESERT RAIDERS"/>
+                        <ComboBoxItem Content="VOSTROYAN FIRSTBORN"/>
+                    </ComboBox>
+                    <Image x:Name="RegiImage"
+                           HorizontalAlignment="Left" 
+                           Height="314" 
+                           Margin="10,73,0,0" 
+                           VerticalAlignment="Top" 
+                           Width="232" 
+                           Stretch="UniformToFill"/>
+                    <TextBlock x:Name="InformationBox"
+                        HorizontalAlignment="Left" 
+                        Margin="301,35,0,0" 
+                        TextWrapping="Wrap" 
+                        Text="" 
+                        VerticalAlignment="Top"/>
 
-    <Grid
-        Background="Tan">
-        
-    </Grid>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </StackPanel>
 </UserControl>

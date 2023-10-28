@@ -233,10 +233,21 @@
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\220px-Elysian.jpg" />
+    <Resource Include="Images\ElysianDropTrooper.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Storage\System.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CadianShockTrooper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CatachanJungleFighter.png" />
+    <Resource Include="Images\KriegGren.png" />
+    <Resource Include="Images\Maccabian_Janissaries.png" />
+    <Resource Include="Images\Mordian_Iron_Guard_female_trooper_2.png" />
+    <Resource Include="Images\Tallarn_Brawler.png" />
+    <Resource Include="Images\Vostroyan_Firstborn_Sgt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
