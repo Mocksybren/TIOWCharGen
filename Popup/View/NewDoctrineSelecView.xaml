@@ -9,7 +9,12 @@
       >
 
     <Grid
-        Background="Bisque">
-        
+         Background="Transparent">
+        <Label Content="Doctrine // WIP" 
+HorizontalAlignment="Center" 
+Margin="0,22,0,0" 
+VerticalAlignment="Top"
+FontSize="28"
+Foreground="White"/>
     </Grid>
 </UserControl>

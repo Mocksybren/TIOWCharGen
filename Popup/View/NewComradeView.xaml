@@ -9,7 +9,12 @@
       >
 
     <Grid
-        Background="AliceBlue">
-
+        Background="Transparent">
+        <Label Content="Comrade // WIP" 
+       HorizontalAlignment="Center" 
+       Margin="0,22,0,0" 
+       VerticalAlignment="Top"
+       FontSize="28"
+       Foreground="White"/>
     </Grid>
 </UserControl>

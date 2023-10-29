@@ -8,66 +8,86 @@
       d:DesignHeight="450" d:DesignWidth="800"
       x:Name="BaseInfoView">
 
-    <Grid
-        Background="Transparent"
-        HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch">
-        <TextBox HorizontalAlignment="Left"
+
+
+        <StackPanel>
+        <StackPanel>
+            <Border>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                        <GradientStop Color="#FF5D4EB5" Offset="0.0"/>
+                        <GradientStop Color="#FF11043E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                   RadiusY="10"
+                                   Rect="0,0,800,500"/>
+                </Border.Clip>
+                <Grid
+                Height="500"
+                Width="800"
+                >
+                    <TextBox HorizontalAlignment="Left"
                  x:Name="CharacterName"
-                 Margin="130,49,0,0" 
+                 Margin="191,50,0,0" 
                  TextWrapping="Wrap" 
                  Text="{Binding CharacterName}" 
                  VerticalAlignment="Top" 
-                 Width="120"
+                 Width="187" Height="23"
                  />
-        <TextBox HorizontalAlignment="Left" 
-                 Margin="130,81,0,0" 
+                    <TextBox HorizontalAlignment="Left" 
+                 Margin="191,90,0,0" 
                  x:Name="PlayerName"
                  TextWrapping="Wrap" 
                  Text="{Binding PlayerName}" 
                  VerticalAlignment="Top" 
-                 Width="120"/>
-        <TextBox HorizontalAlignment="Left" 
-                 Margin="130,112,0,0" 
+                 Width="187" Height="23"/>
+                    <TextBox HorizontalAlignment="Left" 
+                 Margin="191,130,0,0" 
                  TextWrapping="Wrap" 
                  x:Name="RegimentName"
                  Text="{Binding Regiment}" 
                  VerticalAlignment="Top" 
-                 Width="120"/>
-        <TextBox HorizontalAlignment="Left" 
-                 Margin="130,143,0,0" 
+                 Width="187" Height="22"/>
+                    <TextBox HorizontalAlignment="Left" 
+                 Margin="191,169,0,0" 
                  TextWrapping="Wrap" 
                  x:Name="Description"
                  Text="{Binding Description}" 
                  VerticalAlignment="Top" 
-                 Width="120"/>
-        <TextBox HorizontalAlignment="Left" 
-                 Margin="130,174,0,0" 
+                 Width="187" Height="22"/>
+                    <TextBox HorizontalAlignment="Left" 
+                 Margin="191,208,0,0" 
                  TextWrapping="Wrap" 
                  x:Name="Demeanor"
                  Text="{Binding Demeanor}" 
                  VerticalAlignment="Top" 
-                 Width="120"/>
-        <TextBox HorizontalAlignment="Left" 
-                 Margin="130,205,0,0" 
+                 Width="187" Height="22"/>
+                    <TextBox HorizontalAlignment="Left" 
+                 Margin="191,247,0,0" 
                  TextWrapping="Wrap" 
                  x:Name="CampaignName"
                  Text="{Binding CampaignName}" 
                  VerticalAlignment="Top" 
-                 Width="120"/>
-        <TextBox HorizontalAlignment="Left" 
-                 Margin="130,236,0,0" 
+                 Width="187" Height="22"/>
+                    <TextBox HorizontalAlignment="Left" 
+                 Margin="191,286,0,0" 
                  TextWrapping="Wrap" 
                  x:Name="Speciality"
                  Text="{Binding Speciality}" 
                  VerticalAlignment="Top" 
-                 Width="120"/>
-        <Label Content="Character Name:" HorizontalAlignment="Left" Margin="20,45,0,0" VerticalAlignment="Top"/>
-        <Label Content="Player Name:" HorizontalAlignment="Left" Margin="20,76,0,0" VerticalAlignment="Top"/>
-        <Label Content="Regiment Name:" HorizontalAlignment="Left" Margin="20,108,0,0" VerticalAlignment="Top"/>
-        <Label Content="Description:" HorizontalAlignment="Left" Margin="20,139,0,0" VerticalAlignment="Top"/>
-        <Label Content="Demeanor:" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top"/>
-        <Label Content="CampaignName:" HorizontalAlignment="Left" Margin="20,201,0,0" VerticalAlignment="Top"/>
-        <Label Content="Speciality:" HorizontalAlignment="Left" Margin="20,232,0,0" VerticalAlignment="Top"/>
-    </Grid>
+                 Width="187" Height="23"/>
+                    <Label Content="Character Name:" HorizontalAlignment="Left" Margin="20,45,0,0" VerticalAlignment="Top" Foreground="White" Height="33" Width="153" FontSize="18"/>
+                    <Label Content="Player Name:" HorizontalAlignment="Left" Margin="20,84,0,0" VerticalAlignment="Top" Foreground="White" Height="33" Width="124" FontSize="18"/>
+                    <Label Content="Regiment Name:" HorizontalAlignment="Left" Margin="20,124,0,0" VerticalAlignment="Top" Foreground="White" Height="33" Width="153" FontSize="18"/>
+                    <Label Content="Description:" HorizontalAlignment="Left" Margin="20,164,0,0" VerticalAlignment="Top" Foreground="White" Height="32" Width="113" FontSize="18"/>
+                    <Label Content="Demeanor:" HorizontalAlignment="Left" Margin="20,203,0,0" VerticalAlignment="Top" Foreground="White" Height="32" Width="106" FontSize="18"/>
+                    <Label Content="Campaign Name:" HorizontalAlignment="Left" Margin="20,242,0,0" VerticalAlignment="Top" Foreground="White" Height="33" Width="153" FontSize="18"/>
+                    <Label Content="Speciality:" HorizontalAlignment="Left" Margin="20,281,0,0" VerticalAlignment="Top" Foreground="White" Height="33" Width="97" FontSize="18"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+    </StackPanel>
 </UserControl>
+

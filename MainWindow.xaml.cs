@@ -24,5 +24,9 @@ namespace TIOWCharGen
         {
             InitializeComponent();
         }
+        private void WIPButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is Work In Progress");
+        }
     }
 }

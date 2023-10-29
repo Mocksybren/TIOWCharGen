@@ -24,5 +24,29 @@ namespace TIOWCharGen.Popup.View
         {
             InitializeComponent();
         }
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!int.TryParse(e.Text, out int result) || result < 1 || result > 100)
+            {
+                e.Handled = true; // Prevent input
+            }
+        }
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                if (!int.TryParse(textBox.Text, out int result))
+                {
+                    // Handle invalid input (e.g., reset to a default value)
+                    textBox.Text = "50"; // Or any other default value
+                }
+                else
+                {
+                    // Enforce the range (1 to 100)
+                    result = Math.Max(1, Math.Min(100, result));
+                    textBox.Text = result.ToString();
+                }
+            }
+        }
     }
 }

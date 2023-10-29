@@ -23,6 +23,25 @@ namespace TIOWCharGen.Popup.View
         public NewWorldSelecView()
         {
             InitializeComponent();
+            WorldComboBox.SelectedIndex = 0;
+        }
+        private Dictionary<string, (string Text, string ImagePath)> regimentInfoMap = new Dictionary<string, (string Text, string ImagePath)>
+        {
+            { "Death World", ("Text for Death World", "pack://application:,,,/TIOWCharGen;component/Images/World/DeathWorld.png") },
+        };
+        private void WorldComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (WorldComboBox.SelectedItem != null)
+            {
+                string selectedRegiment = (WorldComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+
+                if (regimentInfoMap.TryGetValue(selectedRegiment, out var info))
+                {
+                    // Set the TextBlock text and Image source
+                    WorldInformationBox.Text = info.Text;
+                    WorldImage.Source = new BitmapImage(new Uri(info.ImagePath));
+                }
+            }
         }
     }
 }

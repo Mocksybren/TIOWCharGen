@@ -11,15 +11,15 @@ namespace TIOWCharGen.Popup.ViewModel
     public class NewGenCharacteristicsViewModel : INotifyPropertyChanged
     {
         public TIOWcharacter TIOWcharacter { get; set; }
-        private int weaponSkill;
-        private int ballisticSkill;
-        private int strength;
-        private int toughness;
-        private int agility;
-        private int intellegence;
-        private int perception;
-        private int willpower;
-        private int fellowship;
+        private int weaponSkill = 1;
+        private int ballisticSkill = 1;
+        private int strength = 1;
+        private int toughness = 1;
+        private int agility = 1;
+        private int intellegence = 1;
+        private int perception = 1;
+        private int willpower = 1;
+        private int fellowship = 1;
 
 
         public int WeaponSkill

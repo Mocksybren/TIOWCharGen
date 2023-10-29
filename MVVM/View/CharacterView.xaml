@@ -12,7 +12,7 @@
             <ColumnDefinition Width="400"/>
             <ColumnDefinition Width="400"/>
         </Grid.ColumnDefinitions>
-        <Label Content="character" 
+        <Label Content="Character // WIP" 
                HorizontalAlignment="Center" 
                Margin="0,22,0,0" 
                VerticalAlignment="Top"

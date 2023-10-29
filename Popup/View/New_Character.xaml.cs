@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,45 +44,68 @@ namespace TIOWCharGen.Popup
             NewGearViewModel newGearViewModel = viewModel.NewGearVM;
             NewComradeViewModel newComradeViewModel = viewModel.NewComradeVM;
 
-            //BaseInfo
-            character.CharacterName = baseInfoViewModel.CharacterName;
-            character.PlayerName = baseInfoViewModel.PlayerName;
-            character.Regiment = baseInfoViewModel.Regiment;
-            character.Description = baseInfoViewModel.Description;
-            character.Demeanor = baseInfoViewModel.Demeanor;
-            character.CampaignName = baseInfoViewModel.CampaignName;
-            character.Speciality = baseInfoViewModel.Speciality;
+            if (baseInfoViewModel.CharacterName != null && baseInfoViewModel.CharacterName != null && baseInfoViewModel.CharacterName != null)
+            {
+                string characterName = baseInfoViewModel.CharacterName;
+                string baseFileName = $"{characterName}_data.json";
+                string fileName = baseFileName;
+                string characterNameDupe = characterName;
+                int counter = 1;
+                string roamingFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string subfolder = "TIOWCharGen";
 
-            //CharacteristicsInfo
-            character.WeaponSkill = genCharaViewModel.WeaponSkill;
-            character.BallisticSkill = genCharaViewModel.BallisticSkill;
-            character.Strength = genCharaViewModel.Strength;
-            character.Toughness = genCharaViewModel.Toughness;
-            character.Agility = genCharaViewModel.Agility;
-            character.Intellegence = genCharaViewModel.Intellegence;
-            character.Perception = genCharaViewModel.Perception;
-            character.Willpower = genCharaViewModel.Willpower;
-            character.Fellowship = genCharaViewModel.Fellowship;
+                string fullPath = System.IO.Path.Combine(roamingFolderPath, subfolder);
 
-            //
+                Console.WriteLine(fileName);
+                Console.WriteLine(characterNameDupe);
+                Console.WriteLine(baseFileName);
+                while (System.IO.File.Exists(System.IO.Path.Combine(fullPath, fileName)))
+                {
 
-            await Task.Delay(1);
+                    // If the file with this name already exists, increment the counter
+                    characterNameDupe = $"{characterNameDupe}{counter}";
+                    fileName = $"{characterNameDupe}_data.json";
+                    counter++;
+                    Console.WriteLine(fileName);
+                }
+                //BaseInfo
+                character.CharacterName = characterNameDupe;
+                character.PlayerName = baseInfoViewModel.PlayerName;
+                character.Regiment = baseInfoViewModel.Regiment;
+                character.Description = baseInfoViewModel.Description;
+                character.Demeanor = baseInfoViewModel.Demeanor;
+                character.CampaignName = baseInfoViewModel.CampaignName;
+                character.Speciality = baseInfoViewModel.Speciality;
 
-            string json = character.ToJson();
-            string roamingFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            string subfolder = "TIOWCharGen";
+                //CharacteristicsInfo
+                character.WeaponSkill = genCharaViewModel.WeaponSkill;
+                character.BallisticSkill = genCharaViewModel.BallisticSkill;
+                character.Strength = genCharaViewModel.Strength;
+                character.Toughness = genCharaViewModel.Toughness;
+                character.Agility = genCharaViewModel.Agility;
+                character.Intellegence = genCharaViewModel.Intellegence;
+                character.Perception = genCharaViewModel.Perception;
+                character.Willpower = genCharaViewModel.Willpower;
+                character.Fellowship = genCharaViewModel.Fellowship;
 
+                //
 
-            string fileName = $"{character.CharacterName}_data.json";
-            string filePath = System.IO.Path.Combine(roamingFolderPath, subfolder, fileName);
-            System.IO.Directory.CreateDirectory(System.IO.Path.Combine(roamingFolderPath, subfolder));
-            System.IO.File.WriteAllText(filePath, json);
+                await Task.Delay(1);
 
-            //Console.WriteLine($"JSON Data: {json}");
+                string json = character.ToJson();
 
-            //Debug MessageBox.Show("Character data saved to: " + filePath);
-            homeView.Main_Load(this, EventArgs.Empty);
-            this.Close();
+                string filePath = System.IO.Path.Combine(roamingFolderPath, subfolder, fileName);
+                System.IO.Directory.CreateDirectory(System.IO.Path.Combine(roamingFolderPath, subfolder));
+                System.IO.File.WriteAllText(filePath, json);
+
+                //Console.WriteLine($"JSON Data: {json}");
+
+                //Debug MessageBox.Show("Character data saved to: " + filePath);
+                homeView.Main_Load(this, EventArgs.Empty);
+                this.Close();
+            } else {
+                MessageBox.Show("Character Name and Player Name and Campaign Name are required fields.");
+            }
+}
         }
     }
-}

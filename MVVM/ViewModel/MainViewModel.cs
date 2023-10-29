@@ -72,7 +72,7 @@ namespace TIOWCharGen.MVVM.ViewModel
             characterViewCommand = new RelayCommand(o =>
             {
                 CurrentView = characterVM;
-                MenuText = "character";
+                MenuText = "Character";
             });
 
             RegimentViewCommand = new RelayCommand(o =>

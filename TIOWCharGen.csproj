@@ -68,7 +68,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Core\Charachter.cs" />
+    <Compile Include="Core\Character.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -233,21 +233,24 @@
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\ElysianDropTrooper.jpg" />
+    <Resource Include="Images\Regiment\ElysianDropTrooper.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Storage\System.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\CadianShockTrooper.png" />
+    <Resource Include="Images\Regiment\CadianShockTrooper.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\CatachanJungleFighter.png" />
-    <Resource Include="Images\KriegGren.png" />
-    <Resource Include="Images\Maccabian_Janissaries.png" />
-    <Resource Include="Images\Mordian_Iron_Guard_female_trooper_2.png" />
-    <Resource Include="Images\Tallarn_Brawler.png" />
-    <Resource Include="Images\Vostroyan_Firstborn_Sgt.png" />
+    <Resource Include="Images\Regiment\CatachanJungleFighter.png" />
+    <Resource Include="Images\Regiment\KriegGren.png" />
+    <Resource Include="Images\Regiment\Maccabian_Janissaries.png" />
+    <Resource Include="Images\Regiment\Mordian_Iron_Guard_female_trooper_2.png" />
+    <Resource Include="Images\Regiment\Tallarn_Brawler.png" />
+    <Resource Include="Images\Regiment\Vostroyan_Firstborn_Sgt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\World\DeathWorld.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,9 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1600">
     <StackPanel>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Height="438">
             <Border Width="700"
-                    Height="300">
+                    Height="400">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
                         <GradientStop Color="#FF5D4EB5" Offset="0.0"/>
@@ -20,62 +20,64 @@
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,700,300"/>
+                                       Rect="0,0,700,400"/>
                 </Border.Clip>
                 <Grid>
                     <Grid>
-                        <TextBlock Text="Select character"
+                        <TextBlock Text="Select Character"
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"
                                    HorizontalAlignment="Left"/>
-                        <ListBox x:Name="characters" Height="120" 
-                                 Width="400"
+                        <ListBox x:Name="characters" 
+                                 Width="419"
                                  HorizontalAlignment="Left"
-                                 Margin="10,45,0,135"
+                                 Margin="10,56,0,160"
                                  Background="Transparent"
-                                 SelectionChanged="CharacterSelected">
-                            
-                        </ListBox>
+                                 Foreground="White"
+                                 FontSize="16"
+                                 SelectionChanged="CharacterSelected"/>
                         <Button Content="Select"
-                                Margin="434,45,216,235"
+                                Margin="434,65,216,315"
                                 Style="{StaticResource ButtonThemeSmall}"
                                 Command="{Binding }">
                         </Button>
                         <Button Content="Remove"
-                                Margin="434,70,216,210"
-                                Style="{StaticResource ButtonThemeSmall}">
+                                Margin="434,90,216,290"
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Click="RemoveButton_Click">
                         </Button>
                         <Button Content="New"
-                                Margin="434,95,216,185"
+                                Margin="434,115,216,265"
                                 Style="{StaticResource ButtonThemeSmall}" 
                                 Click="New_Char">
                         </Button>
                         <Button Content="Import"
-                                Margin="434,120,216,160"
-                                Style="{StaticResource ButtonThemeSmall}">
+                                Margin="434,140,216,240"
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Click="WIPButton_Click">
                         </Button>
                         <Button Content="Export"
-                                Margin="434,145,216,135" 
-                                Click="Button_Click"
-                                Style="{StaticResource ButtonThemeSmall}">
+                                Margin="434,165,216,215" 
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Click="WIPButton_Click">
                         </Button>
                         <Button Content="Copy"
-                                Margin="434,170,216,110" 
-                                Click="Button_Click"
+                                Margin="434,190,216,190" 
+                                Click="CopyButton_Click"
                                 Style="{StaticResource ButtonThemeSmall}">
                         </Button>
-                        <ComboBox SelectedIndex="0"
-                            HorizontalAlignment="Center" 
-                            Margin="0,174,0,0" 
+                        <ComboBox x:Name="CampaignsComboBox"
+                            SelectedIndex="0"
+                            SelectionChanged="CampaignsComboBox_SelectionChanged"
+                            HorizontalAlignment="Left" 
+                            Margin="300,255,0,0" 
                             VerticalAlignment="Top" 
-                            Width="120"
-                            
-                                  >
+                            Width="120">
                             <ComboBoxItem Content="All Campaings"/>
 
                         </ComboBox>
-                        <Label Content="Filter By Campaign:" HorizontalAlignment="Left" Margin="179,170,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Filter By Campaign:" HorizontalAlignment="Left" Margin="183,251,0,0" VerticalAlignment="Top"/>
                     </Grid>
 
 
@@ -85,8 +87,8 @@
             </Border>
 
 
-            <Border Width="500"
-                    Height="300"
+            <Border Width="475"
+                    Height="400"
                     CornerRadius="10"
                     Margin="45,0,0,0">
 
@@ -96,6 +98,12 @@
                         <GradientStop Color="#FF11043E" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
+                <TextBlock x:Name="characterInfoTextBlock" 
+                           TextWrapping="Wrap" 
+                           Text="{Binding CharacterInformation}" 
+                           Foreground="White"
+                           FontSize="18"
+                           Margin="10,10,0,0"/>
 
             </Border>
 
