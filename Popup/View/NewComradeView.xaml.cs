@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TIOWCharGen
+namespace TIOWCharGen.Popup.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NewComradeView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewComradeView : UserControl
     {
-        public MainWindow()
+        public NewComradeView()
         {
             InitializeComponent();
-        }
-        private void WIPButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This is Work In Progress");
         }
     }
 }

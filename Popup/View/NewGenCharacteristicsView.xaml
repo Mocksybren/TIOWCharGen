@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="TIOWCharGen.Popup.View.NewGenCharacteristicsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TIOWCharGen.Popup.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      >
+
+    <StackPanel>
+        <StackPanel>
+            <Border>
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                                    <GradientStop Color="#FF5D4EB5" Offset="0.0"/>
+                                    <GradientStop Color="#FF11043E" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="10"
+                                           RadiusY="10"
+                                           Rect="0,0,800,500"/>
+                            </Border.Clip>
+                <Grid>
+                    <Grid Grid.Row="1">
+                        <Label Content="Weapon Skill" Margin="24,20,698,455"  Foreground="White"/>
+                        <Label Content="Ballistic Skill" Margin="130,20,598,456"  Foreground="White"/>
+                        <Label Content="Strength" Margin="242,19,504,456"  Foreground="White"/>
+                        <Label Content="Toughness" Margin="343,19,399,455"  Foreground="White"/>
+                        <Label Content="Agility" Margin="454,20,304,455"   Foreground="White"/>
+                        <Grid>
+                            <TextBox Background="LightSlateGray" 
+                                     x:Name="WeaponSkill"
+                                    Margin="14,44,688,360" 
+                                    Foreground="White"
+                                    VerticalContentAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    FontSize="24"
+                                    Text="{Binding WeaponSkill}"
+                                    BorderBrush="White" 
+                                    BorderThickness="2"                
+                                    Width="98" 
+                                    Height="96"
+                                    PreviewTextInput="TextBox_PreviewTextInput"
+                                    LostFocus="TextBox_LostFocus"
+                        />
+                        <TextBox Background="LightSlateGray" 
+                                    Margin="117,44,585,360" 
+                                    Foreground="White"
+                                    FontSize="24"
+                                    VerticalContentAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    Text="{Binding BallisticSkill}"
+                                    BorderBrush="White" 
+                                    BorderThickness="2"                
+                                    Width="98" 
+                                    Height="96"
+                                    PreviewTextInput="TextBox_PreviewTextInput"
+                                    LostFocus="TextBox_LostFocus"
+                                 />
+                            <TextBox Background="LightSlateGray" 
+                                    Margin="220,44,482,360" 
+                                    Foreground="White"
+                                    FontSize="24"
+                                    VerticalContentAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    Text="{Binding Strength}"
+                                    BorderBrush="White" 
+                                    BorderThickness="2"                
+                                    Width="98" 
+                                    Height="96"
+                                    PreviewTextInput="TextBox_PreviewTextInput"
+                                    LostFocus="TextBox_LostFocus"
+                                     />
+                            <TextBox Background="LightSlateGray" 
+                                    Margin="323,44,379,360" 
+                                    Foreground="White"
+                                    FontSize="24"
+                                    VerticalContentAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    Text="{Binding Toughness}"
+                                    BorderBrush="White" 
+                                    BorderThickness="2"
+                                    Width="98" 
+                                    Height="96"
+                                    PreviewTextInput="TextBox_PreviewTextInput"
+                                    LostFocus="TextBox_LostFocus"/>
+                            <TextBox Background="LightSlateGray" 
+                                    Margin="426,44,276,360" 
+                                    Foreground="White"
+                                    FontSize="24"
+                                    VerticalContentAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    Text="{Binding Agility}"
+                                    BorderBrush="White" 
+                                    BorderThickness="2" 
+                                    Width="98" 
+                                    Height="96"
+                                    PreviewTextInput="TextBox_PreviewTextInput"
+                                    LostFocus="TextBox_LostFocus"
+                        />
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Label Content="Intellegence" Margin="24,156,698,319" Foreground="White"/>
+                            <Label Content="Perception" Margin="130,156,598,320"  Foreground="White"/>
+                            <Label Content="Willpower" Margin="235,155,499,320"   Foreground="White"/>
+                            <Label Content="Fellowship" Margin="343,155,391,319"  Foreground="White"/>
+                        <TextBox Background="LightSlateGray" 
+                            Margin="14,180,688,224" 
+                            Foreground="White"
+                            FontSize="24"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Text="{Binding Intellegence}"
+                            BorderBrush="White" 
+                            BorderThickness="2"                
+                            Width="98" 
+                            Height="96"
+                            PreviewTextInput="TextBox_PreviewTextInput"
+                            LostFocus="TextBox_LostFocus"
+                        />
+                        <TextBox Background="LightSlateGray" 
+                            Margin="117,180,585,224" 
+                            Foreground="White"
+                            FontSize="24"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Text="{Binding Perception}"
+                            BorderBrush="White" 
+                            BorderThickness="2"                
+                            Width="98" 
+                            Height="96"
+                            PreviewTextInput="TextBox_PreviewTextInput"
+                            LostFocus="TextBox_LostFocus"        />
+                        <TextBox Background="LightSlateGray" 
+                            Margin="220,180,482,224" 
+                            Foreground="White"
+                            FontSize="24"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Text="{Binding Willpower}"
+                            BorderBrush="White" 
+                            BorderThickness="2"                
+                            Width="98" 
+                            Height="96"
+                            PreviewTextInput="TextBox_PreviewTextInput"
+                            LostFocus="TextBox_LostFocus"/>
+                        <TextBox Background="LightSlateGray" 
+                            Margin="323,180,379,224" 
+                            Foreground="White"
+                            FontSize="24"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Text="{Binding Fellowship}"
+                            BorderBrush="White" 
+                            BorderThickness="2"                
+                            Width="98" 
+                            Height="96"
+                            PreviewTextInput="TextBox_PreviewTextInput"
+                            LostFocus="TextBox_LostFocus"         
+                        />
+                        </Grid>
+
+
+
+                    </Grid>
+
+
+                </Grid>
+
+            </Border>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

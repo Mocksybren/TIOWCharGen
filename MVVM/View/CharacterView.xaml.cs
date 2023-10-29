@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TIOWCharGen
+namespace TIOWCharGen.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for characterView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class characterView : UserControl
     {
-        public MainWindow()
+        public characterView()
         {
             InitializeComponent();
-        }
-        private void WIPButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This is Work In Progress");
         }
     }
 }

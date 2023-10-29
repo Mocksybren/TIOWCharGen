@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TIOWCharGen.MVVM.ViewModel
 {
-    class CharachterViewModel
+    class characterViewModel
     {
 
     }

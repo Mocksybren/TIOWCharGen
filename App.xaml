@@ -4,20 +4,23 @@
              xmlns:local="clr-namespace:TIOWCharGen"
              xmlns:ViewModel="clr-namespace:TIOWCharGen.MVVM.ViewModel"
              xmlns:View="clr-namespace:TIOWCharGen.MVVM.View"
+             xmlns:ViewPopup="clr-namespace:TIOWCharGen.Popup.View"
+             xmlns:ViewPopupModel="clr-namespace:TIOWCharGen.Popup.ViewModel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/SearchbarTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type ViewModel:HomeViewModel}">
                 <View:HomeView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type ViewModel:CharachterViewModel}">
-                <View:CharachterView/>
+            <DataTemplate DataType="{x:Type ViewModel:characterViewModel}">
+                <View:characterView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type ViewModel:RegimentViewModel}">
@@ -34,6 +37,34 @@
 
             <DataTemplate DataType="{x:Type ViewModel:SkillsViewModel}">
                 <View:SkillsView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type ViewPopupModel:NewBaseInfoViewModel}">
+                <ViewPopup:NewBaseInfoView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type ViewPopupModel:NewGenCharacteristicsViewModel}">
+                <ViewPopup:NewGenCharacteristicsView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type ViewPopupModel:NewRegimentCreationViewModel}">
+                <ViewPopup:NewRegimentCreationView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewPopupModel:NewWorldSelecViewModel}">
+                <ViewPopup:NewWorldSelecView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type ViewPopupModel:NewDoctrineSelecViewModel}">
+                <ViewPopup:NewDoctrineSelecView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewPopupModel:NewGearViewModel}">
+                <ViewPopup:NewGearView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type ViewPopupModel:NewComradeViewModel}">
+                <ViewPopup:NewComradeView/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

@@ -7,15 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1600">
     <StackPanel>
-        <TextBlock Text="Menu"
-                       Foreground="White"
-                       FontSize="28"
-                       HorizontalAlignment="Left"
-                       Margin="0,0,0,20"/>
-
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Height="438">
             <Border Width="700"
-                    Height="300">
+                    Height="400">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
                         <GradientStop Color="#FF5D4EB5" Offset="0.0"/>
@@ -26,121 +20,64 @@
                 <Border.Clip>
                     <RectangleGeometry RadiusX="10"
                                        RadiusY="10"
-                                       Rect="0,0,700,300"/>
-
+                                       Rect="0,0,700,400"/>
                 </Border.Clip>
                 <Grid>
                     <Grid>
-                        <TextBlock Text="Select Charachter"
+                        <TextBlock Text="Select Character"
                                    Foreground="White"
                                    FontSize="20"
                                    Margin="20,10,10,0"
                                    HorizontalAlignment="Left"/>
-                        <ListBox x:Name="Charachters" Height="120" 
-                                 Width="400"
+                        <ListBox x:Name="characters" 
+                                 Width="419"
                                  HorizontalAlignment="Left"
-                                 Margin="10,45,0,135"
+                                 Margin="10,56,0,160"
                                  Background="Transparent"
                                  Foreground="White"
-                                 >
-                        </ListBox>
+                                 FontSize="16"
+                                 SelectionChanged="CharacterSelected"/>
                         <Button Content="Select"
-                                Height="20"
-                                Width="50"
-                                Background="Gray" 
-                                Margin="434,45,216,235"
-                                Foreground="White"
-                                BorderThickness="2"
-                                BorderBrush="AliceBlue">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="7"/>
-                                </Style>
-                            </Button.Resources>
+                                Margin="434,65,216,315"
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Command="{Binding }">
                         </Button>
                         <Button Content="Remove"
-                            Height="20"
-                            Width="50"
-                            Background="Gray" 
-                            Margin="434,70,216,210"
-                            Foreground="White"                                
-                                BorderThickness="2"
-                                BorderBrush="AliceBlue">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="7"/>
-                                </Style>
-                            </Button.Resources>
+                                Margin="434,90,216,290"
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Click="RemoveButton_Click">
                         </Button>
                         <Button Content="New"
-                            Height="20"
-                            Width="50"
-                            Background="Gray" 
-                                Margin="434,95,216,185"
-                                Foreground="White"
-                                BorderThickness="2"
-                                BorderBrush="AliceBlue">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="7"/>
-                                </Style>
-                            </Button.Resources>
+                                Margin="434,115,216,265"
+                                Style="{StaticResource ButtonThemeSmall}" 
+                                Click="New_Char">
                         </Button>
                         <Button Content="Import"
-                            Height="20"
-                            Width="50"
-                            Background="Gray" 
-                                Margin="434,120,216,160"
-                                Foreground="White"
-                                BorderThickness="2"
-                                BorderBrush="AliceBlue">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="7"/>
-                                </Style>
-                            </Button.Resources>
+                                Margin="434,140,216,240"
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Click="WIPButton_Click">
                         </Button>
                         <Button Content="Export"
-                            Height="20"
-                            Width="50"
-                            Background="Gray" 
-                                Margin="434,145,216,135" 
-                                Click="Button_Click"
-                                Foreground="White"
-                                BorderThickness="2"
-                                BorderBrush="AliceBlue">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="7"/>
-                                </Style>
-                            </Button.Resources>
+                                Margin="434,165,216,215" 
+                                Style="{StaticResource ButtonThemeSmall}"
+                                Click="WIPButton_Click">
                         </Button>
                         <Button Content="Copy"
-                            Height="20"
-                            Width="50"
-                            Background="Gray" 
-                                Margin="434,170,216,110" 
-                                Click="Button_Click"
-                                Foreground="White"
-                                BorderThickness="2"
-                                BorderBrush="AliceBlue">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="7"/>
-                                </Style>
-                            </Button.Resources>
+                                Margin="434,190,216,190" 
+                                Click="CopyButton_Click"
+                                Style="{StaticResource ButtonThemeSmall}">
                         </Button>
-                        <ComboBox SelectedIndex="0"
-                            HorizontalAlignment="Center" 
-                            Margin="0,174,0,0" 
+                        <ComboBox x:Name="CampaignsComboBox"
+                            SelectedIndex="0"
+                            SelectionChanged="CampaignsComboBox_SelectionChanged"
+                            HorizontalAlignment="Left" 
+                            Margin="300,255,0,0" 
                             VerticalAlignment="Top" 
-                            Width="120"
-                            
-                                  >
+                            Width="120">
                             <ComboBoxItem Content="All Campaings"/>
 
                         </ComboBox>
-                        <Label Content="Filter By Campaign:" HorizontalAlignment="Left" Margin="179,170,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Filter By Campaign:" HorizontalAlignment="Left" Margin="183,251,0,0" VerticalAlignment="Top"/>
                     </Grid>
 
 
@@ -150,8 +87,8 @@
             </Border>
 
 
-            <Border Width="500"
-                    Height="300"
+            <Border Width="475"
+                    Height="400"
                     CornerRadius="10"
                     Margin="45,0,0,0">
 
@@ -161,11 +98,17 @@
                         <GradientStop Color="#FF11043E" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
+                <TextBlock x:Name="characterInfoTextBlock" 
+                           TextWrapping="Wrap" 
+                           Text="{Binding CharacterInformation}" 
+                           Foreground="White"
+                           FontSize="18"
+                           Margin="10,10,0,0"/>
 
             </Border>
 
         </StackPanel>
-        <StackPanel >
+        <StackPanel>
 
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -181,6 +124,7 @@
             </StackPanel>
             <Grid Height="25"
                         Width="1600"
+                  HorizontalAlignment="Left"
                   >
                 <Label Content="Weapon Skill"
                            Foreground="White"
@@ -218,9 +162,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="WeaponSkill"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -244,9 +189,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="BallisticSkill"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -270,9 +216,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="Strength"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -296,9 +243,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="Toughness"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -322,9 +270,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="Agility"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -335,6 +284,7 @@
             </StackPanel>
             <Grid Height="25"
                         Width="1600"
+                  HorizontalAlignment="Left"
                   >
                 <Label Content="Intelligence"
                            Foreground="White"
@@ -372,9 +322,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="Intellegence"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -399,9 +350,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="Perception"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -425,9 +377,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="Willpower"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -451,9 +404,10 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                        <Label x:Name="Fellowship"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40"/>
@@ -477,14 +431,16 @@
                                 </LinearGradientBrush>
                             </Rectangle.Fill>
                         </Rectangle>
-                        <Label Content="0"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Top"
+                        <Label x:Name="ExpSpent"
+                        Content="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
                         Background="Transparent"
                         Foreground="White" FontWeight="Bold"
                         FontSize="40" Margin="0,10,0,0"/>
                         <Rectangle Width="140" Height="5" Fill="Black" />
-                        <Label Content="0"
+                        <Label x:Name="ExpGained"
+                            Content="0"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top"
                             Background="Transparent"

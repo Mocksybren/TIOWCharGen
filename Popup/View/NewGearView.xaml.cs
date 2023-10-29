@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TIOWCharGen.MVVM.View
+namespace TIOWCharGen.Popup.View
 {
     /// <summary>
-    /// Interaction logic for CharachterView.xaml
+    /// Interaction logic for NewGearView.xaml
     /// </summary>
-    public partial class CharachterView : UserControl
+    public partial class NewGearView : UserControl
     {
-        public CharachterView()
+        public NewGearView()
         {
             InitializeComponent();
         }
